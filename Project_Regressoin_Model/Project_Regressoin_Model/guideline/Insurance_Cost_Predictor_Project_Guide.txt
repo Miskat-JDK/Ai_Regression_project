@@ -1,0 +1,139 @@
+Insurance Cost Predictor Project Guide
+====================================
+
+University Project Guide
+-----------------------
+This project is designed as a university-level machine learning and web application project. It demonstrates how to:
+- load and analyze a dataset,
+- train regression models,
+- evaluate model performance,
+- save the trained models,
+- and deploy a simple interactive prediction interface.
+
+1. What is this project?
+------------------------
+This project predicts medical insurance cost using a dataset of patient details. Examples of input features are age, BMI, smoking status, sex, region, and number of children.
+
+2. What is the goal?
+---------------------
+The goal is to build a model that can estimate insurance cost for a new person based on the input values.
+
+3. What are the main files?
+----------------------------
+train_model.py
+- This file trains the machine learning models.
+- It reads the CSV file.
+- It checks the data.
+- It prepares the data for training.
+- It saves the trained models in one file.
+
+app.py
+- This file is the user interface.
+- It uses Streamlit to show a simple web page.
+- The user enters information.
+- The app predicts the insurance cost.
+
+insurance.csv
+- This is the dataset used for training.
+- The last column is the value we want to predict.
+
+all_models_and_meta.pkl
+- This is the saved trained model file.
+- It contains the models, scores, and important information for the app.
+
+requirements.txt
+- This file lists all the Python libraries needed to run the project.
+
+4. What does each part do?
+---------------------------
+Training part
+- Reads the dataset.
+- Finds the target column.
+- Identifies numeric and text columns.
+- Converts text columns into numbers.
+- Splits data into training and testing sets.
+- Trains the models.
+- Saves everything in the .pkl file.
+
+App part
+- Loads the saved model file.
+- Lets the user choose a model.
+- Lets the user type or choose input values.
+- Predicts the cost.
+- Shows the result on the screen.
+
+5. How to run the project
+-------------------------
+Step 1: Install the required libraries
+- Open a terminal in the project folder.
+- Run this command:
+  python -m pip install -r requirements.txt
+
+Step 2: Train the model
+- Run this command:
+  python train_model.py
+- This creates the saved model file.
+
+Step 3: Start the app
+- Run this command:
+  python -m streamlit run app.py
+- Open the web address shown in the terminal.
+
+6. How to test the project
+--------------------------
+Test the training part
+- Run train_model.py.
+- Check that the training results appear in the terminal.
+- Check that the file all_models_and_meta.pkl is created.
+
+Test the app part
+- Open the browser link.
+- Choose a model.
+- Enter values such as age, BMI, smoker, and region.
+- See the predicted insurance cost.
+
+7. What the UI looks like
+-------------------------
+The app has a simple page:
+- The left side has input controls.
+- The right side has model options and performance scores.
+- At the bottom, the app shows the prediction result.
+
+8. How to use a different dataset
+---------------------------------
+You can use your own CSV file too.
+1. Replace insurance.csv with your own file.
+2. Make sure the answer column is the last column.
+3. Run train_model.py again.
+4. Run app.py again.
+
+9. Important beginner tips
+--------------------------
+- Always run train_model.py before app.py.
+- Make sure the CSV file is in the same folder.
+- The last column should be the target value you want to predict.
+- If something does not work, check the terminal messages.
+
+10. Troubleshooting
+-------------------
+If Python is not found
+- Install Python and make sure it is on PATH.
+
+If libraries are missing
+- Run: python -m pip install -r requirements.txt
+
+If the app says the model file is missing
+- Run: python train_model.py first
+
+11. Simple summary
+------------------
+This project is a complete beginner-friendly example of machine learning. It teaches how data can become a model, and how that model can be used in a real app.
+
+12. Submission note
+-------------------
+This project is ready to submit as a student project because it includes:
+- data loading,
+- model training,
+- performance evaluation,
+- model saving,
+- and a working web interface.

@@ -1,0 +1,4 @@
+C:\Users\Hp\Desktop\AI\Project_Regressoin_Model\Project_Regressoin_Model>
+python -m streamlit run app.py  #run cmd
+python -m pip install -r requirements.txt
+cd C:\Users\Hp\Desktop\AI\Project_Regressoin_Model\Project_Regressoin_Model

@@ -1,0 +1,14 @@
+Presentation Summary
+===================
+
+Good morning/afternoon.
+
+This project is an insurance cost prediction system built using Python, machine learning, and Streamlit. The main goal was to train regression models that can estimate medical insurance charges based on patient information such as age, BMI, smoking status, region, sex, and number of children.
+
+The project has two main parts. The first part, train_model.py, loads the dataset, checks the data, converts text values into numbers, trains the models, and saves everything into one model file. The second part, app.py, is a simple web interface where users can enter patient details and get a live prediction.
+
+The models used in this project include Linear Regression, Random Forest, Decision Tree, Gradient Boosting, and K-Nearest Neighbors. After testing the models, the best result in this run was Gradient Boosting with an R² score of 0.8792 and MAE of $2,446.20. Random Forest also performed very well with an R² score of 0.8658 and MAE of $2,539.24.
+
+This project is useful because it shows the complete machine learning workflow from data preparation to model evaluation and deployment. It also shows how machine learning can be turned into a real application that users can interact with easily.
+
+In conclusion, this project successfully combines data science and software development. It is a strong university project because it is practical, understandable, and demonstrates real-world problem solving.

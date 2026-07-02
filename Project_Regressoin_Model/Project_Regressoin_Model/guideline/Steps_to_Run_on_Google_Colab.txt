@@ -1,0 +1,62 @@
+Steps to Run on Google Colab
+============================
+
+This guide is written for beginners. It shows the easiest way to run your project in Google Colab.
+
+1. Open Google Colab
+- Go to: https://colab.research.google.com/
+- Click "New Notebook".
+
+2. Upload your project files
+In Colab, upload these files from your project folder:
+- train_model.py
+- app.py
+- insurance.csv
+- requirements.txt
+
+3. Install the needed libraries
+In a new code cell, run this:
+
+!pip install -r requirements.txt
+
+This step downloads the tools the project needs.
+
+4. Train the model
+In another code cell, run this:
+
+!python train_model.py
+
+This step creates the file:
+- all_models_and_meta.pkl
+
+5. Start the app with ngrok
+Colab cannot open Streamlit like a normal computer app, so we use ngrok to make the app visible in the browser.
+
+First, install ngrok:
+
+!pip install pyngrok
+
+Then, create a public link:
+
+from pyngrok import ngrok
+ngrok.connect(8501)
+
+Now start the app:
+
+!streamlit run app.py --server.port 8501
+
+6. Open the app in your browser
+- Copy the ngrok link shown after the command starts.
+- Open that link in a new browser tab.
+
+7. Try the app
+- Choose a model from the sidebar.
+- Enter values such as age, BMI, smoker, and region.
+- Look at the predicted insurance cost.
+
+8. Very simple summary
+- Upload files
+- Install packages
+- Run train_model.py
+- Run the app with ngrok
+- Open the link in your browser
